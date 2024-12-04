@@ -1,0 +1,32 @@
+//41. Print the nth fibonacci number.
+#include<iostream>
+using namespace std;
+int main(){
+	int num;
+	int Fibonacci,a=0,b=1;
+	cout<<"enter a number \n";
+	cin>>num;
+	if(num<0){
+		cout<<"not defined for the negative number\n";
+		
+		}
+		else{
+	
+	 if(num==0){
+			Fibonacci=0;
+		}
+	else if(num==1){
+			Fibonacci=1;
+		}
+	else {
+		for(int i=2;i<=num;i++){
+			Fibonacci=a+b;
+			a=b;
+			b=Fibonacci;
+			
+		}	
+	}	
+		}
+		cout<<"the " <<num <<"th" <<" fibanaci number is = " <<Fibonacci;	
+	return 0;
+}
