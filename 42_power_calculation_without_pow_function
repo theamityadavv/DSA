@@ -1,0 +1,33 @@
+//Q9. Two numbers are entered through the keyboard. Write a program to find the value of one number raised 
+//to the power of another.
+#include<iostream>
+using namespace std;
+double result(double base, int expon){
+	double result= 1;
+ if (expon>0){
+ 	for(int i=1;i<=expon;i++){
+ 		result*=base;
+	 }
+ }
+ else if  (expon<0){
+ 	for(int i=1;i<=-expon;i++){
+ 		result*=base;
+	 }
+	 result=1/result;
+ }
+ else {
+ 	return 1;
+ }
+ 
+ return result;
+}
+int main(){
+	double num1,num2;
+	cout<<"Enter the first number that is base \n";
+	cin>>num1;
+	cout<<"Enter the Second number that is exponential\n";
+	cin>>num2;
+	double value= result(num1,num2);
+	cout<<value;
+	return 0;
+}
