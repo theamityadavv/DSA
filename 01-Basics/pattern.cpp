@@ -221,14 +221,40 @@ void pattern18(int n){
 }
 
 void pattern19(int n){
+    // upper part
     for(int i=0;i<n;i++){
-        char el='A'+ n-1;
-        for(char ch=el-i;ch<=el;ch++){
-            cout<<ch;
+        //star
+        for(int j=1;j<=n-i;j++){
+            cout<<'*';
+        }
+        // space
+        for(int j=1;j<=2*i;j++){
+            cout<<" ";
+        }
+        // star
+        for(int j=1;j<=n-i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+     // lower part
+    for(int i=0;i<n;i++){
+        //star
+        for(int j=1;j<=i+1;j++){
+            cout<<'*';
+        }
+        // space
+        for(int j=1;j<=((2*n-2)-(2*i));j++){
+            cout<<" ";
+        }
+        // star
+        for(int j=1;j<=i+1;j++){
+            cout<<"*";
         }
         cout<<endl;
     }
 }
+
 
 
 int main(){
