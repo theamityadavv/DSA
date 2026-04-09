@@ -186,10 +186,50 @@ void pattern16(int n){
         cout<<endl;
     }
 }
-
 void pattern17(int n){
-
+    for(int i=1;i<=n;i++){
+        char ch='A';
+        // spaces
+        for(int j=1;j<=n-i;j++){
+            cout<<" ";
+        }
+        // pattern
+        for(int j=1;j<=2*i-1;j++){
+            cout<<ch;
+            if(j<i){
+                ch++;
+            }
+            else{
+                ch--;
+            }
+        }
+        // spaces
+        for(int j=1;j<n-i;j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
 }
+void pattern18(int n){
+    for(int i=0;i<n;i++){
+        char el='A'+ n-1;
+        for(char ch=el-i;ch<=el;ch++){
+            cout<<ch;
+        }
+        cout<<endl;
+    }
+}
+
+void pattern19(int n){
+    for(int i=0;i<n;i++){
+        char el='A'+ n-1;
+        for(char ch=el-i;ch<=el;ch++){
+            cout<<ch;
+        }
+        cout<<endl;
+    }
+}
+
 
 int main(){
         int n=5;
@@ -209,7 +249,9 @@ int main(){
         // pattern14(n);
         // pattern15(n);
         // pattern16(n);
-        pattern17(n);
+        // pattern17(n);
+        // pattern18(n);
+        pattern19(n);
 
         return 0;
     }
