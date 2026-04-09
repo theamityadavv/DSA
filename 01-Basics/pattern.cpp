@@ -219,7 +219,6 @@ void pattern18(int n){
         cout<<endl;
     }
 }
-
 void pattern19(int n){
     // upper part
     for(int i=0;i<n;i++){
@@ -254,8 +253,58 @@ void pattern19(int n){
         cout<<endl;
     }
 }
+void pattern20(int n){
+    for(int i=1;i<=n;i++){
+        // star
+        for(int j=1;j<=i;j++){
+            cout<<"*";
+        }
+        // space
+        for(int j=1;j<=((2*n)-(2*i));j++){
+            cout<<" ";
+        }
+        for(int j=1;j<=i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    // lower part
+     for(int i=1;i<n;i++){
+        // star
+        for(int j=1;j<=n-i;j++){
+            cout<<"*";
+        }
+        // space
+        for(int j=1;j<=2*i;j++){
+            cout<<" ";
+        }
+        for(int j=1;j<=n-i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
 
-
+void pattern21(int n){
+for(int i=1;i<=n;i++){
+    if(i==1 || i==n){
+        for(int j=1;j<=n;j++){
+            cout<<"*";
+        }
+    }
+    else{
+        for(int j=1;j<=n;j++){ //error
+            if(j==1 || j==n){
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+    }
+    cout<<endl;
+}
+}
 
 int main(){
         int n=5;
@@ -277,7 +326,9 @@ int main(){
         // pattern16(n);
         // pattern17(n);
         // pattern18(n);
-        pattern19(n);
-
+        // pattern19(n);
+        //  pattern20(n);
+         pattern21(n);
+    
         return 0;
     }
